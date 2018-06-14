@@ -1,13 +1,14 @@
 var controllers = require('../controllers/index');
+var express=require('express');
 var router = express.Router();
 
 router.route("/companies")
-    .get(controllers.companiesGet(req, res))
-    .post(controllers.companiesPost(req, res));
+    .get(controllers.companiesGet)
+    .post(controllers.companiesPost);
 
 router.route("/companies/:company_id")
-    .get(controllers.companyGet(req, res))
-    .put(controllers.companyPost(req, res))
-    .delete(controllers.companyDelete(req, res));
+    .get(controllers.companyGet)
+    .put(controllers.companyPost)
+    .delete(controllers.companyDelete);
 
 module.exports = router;

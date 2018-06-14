@@ -1,4 +1,4 @@
-var Company = require("./app/models/company");
+var Company = require("../models/company");
 var exports = module.exports = {};
 
 exports.companiesGet = function(req, res){
