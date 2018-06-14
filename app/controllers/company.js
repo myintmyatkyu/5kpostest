@@ -9,13 +9,12 @@ exports.companiesGet = function(req, res){
 };
 
 exports.companiesPost = function(req,res){
-    var company=new Company();
-    company.company_id=req.body.company_id;
-    company.name=req.body.name;
+    var company = new Company();
+    company.company_id = req.body.company_id;
+    company.name = req.body.name;
 
     company.save(function(err){
         if(err) res.send(err);
-
         res.json(company);
     });
 };
